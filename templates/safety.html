@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Password Safety{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h1 class="mb-4">Password Safety Guide</h1>
+
+    <div class="row mb-5">
+        <div class="col-md-6">
+            <img src="https://images.unsplash.com/photo-1605647381739-9bba88b1c5d1" alt="Password Safety" class="img-fluid safety-image">
+        </div>
+        <div class="col-md-6">
+            <h2>Creating Strong Passwords</h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Use at least 12 characters</li>
+                <li class="list-group-item">Mix uppercase and lowercase letters</li>
+                <li class="list-group-item">Include numbers and special characters</li>
+                <li class="list-group-item">Avoid personal information</li>
+                <li class="list-group-item">Use unique passwords for each account</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-md-6 order-md-2">
+            <img src="https://images.unsplash.com/photo-1653389525308-e7ab9fc0c260" alt="Password Security" class="img-fluid safety-image">
+        </div>
+        <div class="col-md-6 order-md-1">
+            <h2>Best Practices</h2>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Enable Two-Factor Authentication</h5>
+                    <p class="card-text">Add an extra layer of security to your accounts by enabling 2FA whenever possible.</p>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Regular Password Updates</h5>
+                    <p class="card-text">Change your passwords periodically, especially for critical accounts.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Avoid Common Mistakes</h5>
+                    <p class="card-text">Don't use sequential numbers, keyboard patterns, or common substitutions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert alert-info">
+        <h3>Did You Know?</h3>
+        <p>Using a password manager like SOManager can help you generate and store strong, unique passwords for all your accounts safely.</p>
+        <a href="/download" class="btn btn-info">Get SOManager Now</a>
+    </div>
+</div>
+{% endblock %}
