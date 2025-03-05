@@ -19,11 +19,19 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db.init_app(app)
 
 # Import models after db initialization
-from models import DownloadCount
+from models import DownloadCount, ViewCount
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    view_count = ViewCount.query.first()
+    if not view_count:
+        view_count = ViewCount(count=0)
+        db.session.add(view_count)
+        db.session.commit()
+    view_count.count += 1
+    db.session.commit()
+    count = view_count.count
+    return render_template('index.html', view_count=count)
 
 @app.route('/safety')
 def safety():
@@ -52,10 +60,15 @@ def increment_downloads():
 
 with app.app_context():
     db.create_all()
-    # Initialize counter if not exists
+    # Initialize counters if not exist
     if not DownloadCount.query.first():
-        initial_count = DownloadCount(count=0)
-        db.session.add(initial_count)
+        initial_download_count = DownloadCount(count=0)
+        db.session.add(initial_download_count)
+        db.session.commit()
+    
+    if not ViewCount.query.first():
+        initial_view_count = ViewCount(count=0)
+        db.session.add(initial_view_count)
         db.session.commit()
 
     # Ensure downloads directory exists

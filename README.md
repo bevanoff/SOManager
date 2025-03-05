@@ -9,6 +9,8 @@ SOManager is a powerful, open-source password manager built with Python. It allo
 - **Privacy Focused**: Your data never leaves your device.
 - **Open Source**: Transparent and built with Python for reliability.
 - **Cross-Platform**: Compatible with Windows, macOS, and Linux.
+- **Website View Counter**: Track the number of views on the homepage.
+- **Download Counter**: Track the number of downloads.
 
 ## Installation
 
