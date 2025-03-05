@@ -58,6 +58,16 @@ def increment_downloads():
     db.session.commit()
     return jsonify({"count": download_count.count})
 
+@app.route('/increment-views', methods=['POST'])
+def increment_views():
+    view_count = ViewCount.query.first()
+    if not view_count:
+        view_count = ViewCount(count=0)
+        db.session.add(view_count)
+    view_count.count += 1
+    db.session.commit()
+    return jsonify({"count": view_count.count})
+
 with app.app_context():
     db.create_all()
     # Initialize counters if not exist
