@@ -28,7 +28,7 @@ Follow these steps to install SOManager on your device:
 
 ## Usage
 
-After installing SOManager, you can start securing your digital life by adding and managing your passwords.
+After installing SOManager, you can start securing your digital life by adding and managing your passwords fully offline.
 
 ## Download
 
@@ -36,8 +36,8 @@ To download the latest version of SOManager, visit the [download page](https://<
 
 ## Contributing
 
-We welcome contributions from the community. If you would like to contribute, please fork the repository and submit a pull request.
+Contributions are welcome. If you would like to contribute, please fork the repository and submit a pull request.
 
 ## Contact
 
-For any questions or suggestions, please open an issue or contact us at [brody.evanoff@gmail.com](mailto:brody.evanoff@gmail.com).
+For any questions or suggestions, please open an issue or contact me at [brody.evanoff@gmail.com](mailto:brody.evanoff@gmail.com).
