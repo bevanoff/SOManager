@@ -38,10 +38,6 @@ To download the latest version of SOManager, visit the [download page](https://<
 
 We welcome contributions from the community. If you would like to contribute, please fork the repository and submit a pull request.
 
-## License
-
-SOManager is released under the MIT License. See [LICENSE](LICENSE) for more information.
-
 ## Contact
 
-For any questions or suggestions, please open an issue or contact us at [your-email@example.com](mailto:your-email@example.com).
+For any questions or suggestions, please open an issue or contact us at [brody.evanoff@gmail.com](mailto:brody.evanoff@gmail.com).
