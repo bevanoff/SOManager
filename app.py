@@ -2,14 +2,10 @@ import os
 import logging
 from flask import Flask, render_template, jsonify, request, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy.orm import DeclarativeBase
 
 logging.basicConfig(level=logging.DEBUG)
 
-class Base(DeclarativeBase):
-    pass
-
-db = SQLAlchemy(model_class=Base)
+db = SQLAlchemy()
 app = Flask(__name__)
 app.secret_key = os.environ.get("SESSION_SECRET")
 
@@ -31,7 +27,8 @@ def index():
     view_count.count += 1
     db.session.commit()
     count = view_count.count
-    return render_template('index.html', view_count=count)
+    download_count = DownloadCount.query.first().count if DownloadCount.query.first() else 0
+    return render_template('index.html', view_count=count, download_count=download_count)
 
 @app.route('/download')
 def download():
@@ -42,6 +39,12 @@ def download():
 @app.route('/download/<platform>/<filename>')
 def download_file(platform, filename):
     """Handle file downloads from the static/downloads directory"""
+    download_count = DownloadCount.query.first()
+    if not download_count:
+        download_count = DownloadCount(count=0)
+        db.session.add(download_count)
+    download_count.count += 1
+    db.session.commit()
     return send_from_directory('static/downloads', f"{platform}/{filename}")
 
 @app.route('/increment-downloads', methods=['POST'])
