@@ -18,11 +18,10 @@
                     <i class="bi bi-windows feature-icon mb-3"></i>
                     <h3>Windows</h3>
                     <p>Compatible with Windows 10 and 11</p>
-                    <a href="{{ url_for('download_file', platform='windows', filename='somanager_win.zip') }}" 
-                       onclick="incrementDownloadCount()" 
-                       class="btn btn-info">
+                    <a href="{{ url_for('download_file', platform='windows', filename='somanager_win.zip') }}" onclick="incrementDownloadCount()" class="btn btn-info">
                         <i class="bi bi-download me-2"></i>Download Now
                     </a>
+                    <span class="badge bg-secondary ms-2">Downloads: <span id="download-count">{{ download_count }}</span></span>
                 </div>
             </div>
         </div>
@@ -33,11 +32,10 @@
                     <i class="bi bi-apple feature-icon mb-3"></i>
                     <h3>macOS</h3>
                     <p>For macOS 10.15 and newer</p>
-                    <a href="{{ url_for('download_file', platform='macos', filename='somanager_mac.zip') }}" 
-                       onclick="incrementDownloadCount()" 
-                       class="btn btn-info">
+                    <a href="{{ url_for('download_file', platform='macos', filename='somanager_mac.zip') }}" onclick="incrementDownloadCount()" class="btn btn-info">
                         <i class="bi bi-download me-2"></i>Download Now
                     </a>
+                    <span class="badge bg-secondary ms-2">Downloads: <span id="download-count">{{ download_count }}</span></span>
                 </div>
             </div>
         </div>
@@ -48,20 +46,11 @@
                     <i class="bi bi-ubuntu feature-icon mb-3"></i>
                     <h3>Linux</h3>
                     <p>For major Linux distributions</p>
-                    <a href="{{ url_for('download_file', platform='linux', filename='somanager_linux.zip') }}" 
-                       onclick="incrementDownloadCount()" 
-                       class="btn btn-info">
+                    <a href="{{ url_for('download_file', platform='linux', filename='somanager_linux.zip') }}" onclick="incrementDownloadCount()" class="btn btn-info">
                         <i class="bi bi-download me-2"></i>Download Now
                     </a>
+                    <span class="badge bg-secondary ms-2">Downloads: <span id="download-count">{{ download_count }}</span></span>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row mt-5">
-        <div class="col-lg-8 mx-auto text-center">
-            <div class="alert alert-secondary">
-                <p class="mb-0">Total Downloads: <span id="download-count">{{ download_count }}</span></p>
             </div>
         </div>
     </div>
