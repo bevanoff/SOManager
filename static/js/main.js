@@ -8,7 +8,7 @@ function incrementDownloadCount() {
     })
     .then(response => response.json())
     .then(data => {
-        document.getElementById('download-count').textContent = data.count;
+        document.querySelectorAll('#download-count').forEach(el => el.textContent = data.count);
     })
     .catch(error => console.error('Error:', error));
 }
