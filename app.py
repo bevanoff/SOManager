@@ -31,6 +31,11 @@ def download():
     count = download_count.count if download_count else 0
     return render_template('download.html', download_count=count)
 
+@app.route('/download/<platform>/<filename>')
+def download_file(platform, filename):
+    """Handle file downloads from the static/downloads directory"""
+    return send_from_directory('static/downloads', f"{platform}/{filename}")
+
 @app.route('/increment-downloads', methods=['POST'])
 def increment_downloads():
     download_count = DownloadCount.query.first()
