@@ -21,7 +21,7 @@
                     <a href="{{ url_for('download_file', platform='windows', filename='somanager_win.zip') }}" 
                        onclick="incrementDownloadCount()" 
                        class="btn btn-info">
-                        <i class="bi bi-download me-2"></i>Download for Windows
+                        <i class="bi bi-download me-2"></i>Download Now
                     </a>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                     <a href="{{ url_for('download_file', platform='macos', filename='somanager_mac.zip') }}" 
                        onclick="incrementDownloadCount()" 
                        class="btn btn-info">
-                        <i class="bi bi-download me-2"></i>Download for macOS
+                        <i class="bi bi-download me-2"></i>Download Now
                     </a>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                     <a href="{{ url_for('download_file', platform='linux', filename='somanager_linux.zip') }}" 
                        onclick="incrementDownloadCount()" 
                        class="btn btn-info">
-                        <i class="bi bi-download me-2"></i>Download for Linux
+                        <i class="bi bi-download me-2"></i>Download Now
                     </a>
                 </div>
             </div>
@@ -62,54 +62,6 @@
         <div class="col-lg-8 mx-auto text-center">
             <div class="alert alert-secondary">
                 <p class="mb-0">Total Downloads: <span id="download-count">{{ download_count }}</span></p>
-            </div>
-        </div>
-    </div>
-
-    <div class="row mt-5">
-        <div class="col-lg-8 mx-auto">
-            <div class="card">
-                <div class="card-body">
-                    <h3>System Requirements</h3>
-                    <ul class="list-unstyled">
-                        <li><i class="bi bi-check-circle-fill text-info me-2"></i>Python 3.8 or newer</li>
-                        <li><i class="bi bi-check-circle-fill text-info me-2"></i>2GB RAM minimum</li>
-                        <li><i class="bi bi-check-circle-fill text-info me-2"></i>100MB free disk space</li>
-                        <li><i class="bi bi-check-circle-fill text-info me-2"></i>Required Python packages: cryptography, tkinter</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row mt-5">
-        <div class="col-lg-8 mx-auto">
-            <div class="card">
-                <div class="card-body">
-                    <h3>Installation Instructions</h3>
-                    <ol class="mb-4">
-                        <li>Download the package for your operating system</li>
-                        <li>Extract the downloaded ZIP file</li>
-                        <li>Install Python 3.8 or newer if not already installed</li>
-                        <li>Install required packages:
-                            <pre><code>pip install cryptography</code></pre>
-                        </li>
-                        <li>Run the program:
-                            <ul>
-                                <li>For GUI version: <code>python password_manager_gui.py</code></li>
-                                <li>For CLI version: <code>python password_manager.py</code></li>
-                            </ul>
-                        </li>
-                    </ol>
-                    <div class="alert alert-info">
-                        <h4>What's Included</h4>
-                        <ul>
-                            <li><strong>password_manager.py</strong> - Command-line interface version</li>
-                            <li><strong>password_manager_gui.py</strong> - Graphical user interface version</li>
-                            <li><strong>README.txt</strong> - Detailed setup and usage instructions</li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
